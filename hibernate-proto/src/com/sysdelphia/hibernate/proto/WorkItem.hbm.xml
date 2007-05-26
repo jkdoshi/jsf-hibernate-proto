@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sysdelphia.hibernate.proto">
+
+	<class name="WorkItem" table="workitem">
+		<comment>Items that the workflow users work upon.</comment>
+
+		<id name="id" type="long">
+			<column name="id" >
+				<comment>primary key</comment>
+			</column>
+			<generator class="native" />
+		</id>
+
+		<many-to-one name="assignedTo" class="User">
+			<column name="assigned_to">
+				<comment>
+					the user this work item is assigned to
+				</comment>
+			</column>
+		</many-to-one>
+
+		<property name="description" type="text">
+			<column name="description" >
+				<comment>work item description</comment>
+			</column>
+		</property>
+
+		<property name="priority" type="int">
+			<column name="priority" default="5">
+				<comment>
+					work item priority (lower number means higher
+					priority)
+				</comment>
+			</column>
+		</property>
+
+		<property name="status" type="string">
+			<column name="`status`" default="'open'">
+				<comment>
+					work item status (open, in-progress, on-hold,
+					closed, cancelled)
+				</comment>
+			</column>
+		</property>
+
+		<list name="notes" inverse="true" cascade="all,delete-orphan">
+			<key column="workitem_id" />
+			<index column="seq" />
+			<one-to-many class="Note" />
+		</list>
+
+	</class>
+
+</hibernate-mapping>
