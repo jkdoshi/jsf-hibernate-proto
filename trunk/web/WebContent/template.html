@@ -13,7 +13,7 @@
 </head>
 <body>
 	<h1><ui:insert name="title">undefined "title"</ui:insert></h1>
-	<p>You are logged in as: #{userProfile.username}</p>
+	<p>You are logged in as: #{userProfile.userName}</p>
 	<ui:insert name="content"><ui:include src="#{param.page}"/></ui:insert>
 	<h:messages/>
 </body>

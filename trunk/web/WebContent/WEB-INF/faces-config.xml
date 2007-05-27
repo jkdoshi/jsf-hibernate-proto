@@ -39,5 +39,19 @@
 		</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>workItem</managed-bean-name>
+		<managed-bean-class>
+			com.sysdelphia.proto.backing.WorkItemAction
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		
+		<managed-property>
+			<property-name>userName</property-name>
+			<property-class>java.lang.String</property-class>
+			<value>#{userProfile.userName}</value>
+		</managed-property>
+	</managed-bean>
 
 </faces-config>
