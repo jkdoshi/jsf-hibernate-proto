@@ -19,16 +19,6 @@ the right path -
 <ui:composition template="template.html">
 	<ui:define name="title">welcome</ui:define>
 	<ui:define name="content">
-		<h:form id="userForm">
-			<label for="userForm:usernameList">Select username: <h:selectOneListbox
-				id="usernameList" value="#{userProfile.userName}" size="1"
-				immediate="true"
-				required="true" onchange="submit()">
-				<f:selectItem itemLabel="--Select--" />
-				<f:selectItems value="#{fx:query2map('users')}" />
-			</h:selectOneListbox> </label>
-		</h:form>
-		<a href="workitem.html">Work Items</a>
 		<h:dataTable id="dt" var="row" value="#{workItem.rows}">
 			<h:column>
 				<f:facet name="header">Id</f:facet>
