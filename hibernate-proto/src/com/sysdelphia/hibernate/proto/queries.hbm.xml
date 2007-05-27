@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sysdelphia.hibernate.proto">
+	<sql-query name="users">
+		<return-scalar column="name" type="string" />
+		<return-scalar column="username" type="string" />
+		SELECT first_name || coalesce(' ' || initial || ' ', ' ') || last_name as name, username FROM "user"
+	</sql-query>
+</hibernate-mapping>

@@ -27,5 +27,6 @@
         <mapping resource="com/sysdelphia/hibernate/proto/User.hbm.xml"/>
         <mapping resource="com/sysdelphia/hibernate/proto/WorkItem.hbm.xml"/>
         <mapping resource="com/sysdelphia/hibernate/proto/Note.hbm.xml"/>
+        <mapping resource="com/sysdelphia/hibernate/proto/queries.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
