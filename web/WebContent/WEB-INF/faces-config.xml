@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+
+<faces-config>
+	<application>
+		<locale-config>
+			<default-locale>en-US</default-locale>
+		</locale-config>
+		<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+	</application>
+
+	<lifecycle>
+		<phase-listener>
+			com.doshiland.fx4web.jsf.DebugListener
+		</phase-listener>
+		<!-- The next listener is already enabled in fx4web.jar, so we don't have to here. -->
+		<!--
+			<phase-listener>
+			com.doshiland.fx4web.jsf.ViewInitListener
+			</phase-listener>
+		-->
+	</lifecycle>
+
+	<managed-bean>
+		<managed-bean-name>catalog</managed-bean-name>
+		<managed-bean-class>
+			com.sysdelphia.proto.backing.CatalogAction
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>userProfile</managed-bean-name>
+		<managed-bean-class>
+			com.sysdelphia.proto.backing.UserProfile
+		</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+</faces-config>
