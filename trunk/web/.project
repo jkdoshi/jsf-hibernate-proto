@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>jsf-hibernate-proto</name>
+	<name>proto-web</name>
 	<comment></comment>
 	<projects>
-		<project>hibernate-proto</project>
 		<project>fx4web</project>
+		<project>proto-persistence</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

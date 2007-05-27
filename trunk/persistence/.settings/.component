@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-modules id="moduleCoreId">
-<wb-module deploy-name="hibernate-proto">
+<wb-module deploy-name="proto-persistence">
 <wb-resource deploy-path="/" source-path="/src"/>
 <wb-resource deploy-path="/" source-path="/test"/>
 <property name="context-root"/>
