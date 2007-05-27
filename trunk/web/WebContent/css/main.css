@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: sans-serif;
+}
+
+table.data {
+	border: dotted black 1px;
+	border-collapse: collapse;
+}
+
+table.data td, table.data th {
+	border: dotted black 1px;
+}
+
+table.data thead {
+	background-color: #DDAFFF;
+}
+
+table.data tbody {
+	background-color: #F8EFFF;
+}

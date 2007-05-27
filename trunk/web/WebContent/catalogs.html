@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<body>
+<h:messages />
+<h:form id="frm1">
+	<label>Catalog Name: <h:inputText id="name" value="#{catalog.name}"
+		required="true" /></label>
+	<br />
+	<label>Catalog Description: <h:inputText id="description"
+		value="#{catalog.description}" required="true" /></label>
+	<br />
+	<h:commandButton value="Add New" action="#{catalog.addNew}" />
+</h:form>
+<h:form id="frm2">
+	<h:selectOneListbox id="lst" value="#{catalog.selected}" size="5" onclick="submit()">
+		<f:selectItems value="#{catalog.rows}" />
+	</h:selectOneListbox>
+</h:form>
+</body>
+</html>
