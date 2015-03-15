@@ -1,0 +1,1 @@
+A project to prototype web applications using JSF and Hibernate
